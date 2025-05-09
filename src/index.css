@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+
+@import "tailwindcss";
+
+:root{
+  --BlueMain: #1b325f;
+  --SkyBlue: #9cc4e4;
+  --GrayMain: #e9f2f9;
+  --OceanBlue: #3a89c9;
+  --OrangeMain: #f26c4f;
+}
+
+body{
+  font-family: "Poppins",
+    sans-serif;
+}
+
+.backgroundPresentation{
+  background-image: url('./assets/hand_painted_watercolour_texture_background_1708.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+.shadow-image{
+  filter: drop-shadow(
+    5px 5px 10px rgba(0, 0, 0, .8)
+  );
+}
