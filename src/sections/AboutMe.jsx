@@ -1,13 +1,12 @@
 import AboutMeImage from "../assets/sobremi.jpg";
+import Journey from "../components/Journey";
 
 const AboutMe = () => {
   return (
     <div>
       <div className="w-5/6 m-auto py-24">
         <div className="text-center py-10 mb-6">
-          <h1 className="text-3xl font-bold uppercase text-[var(--OrangeMain)] border-b-4 mx-auto inline-block">
-            Acerca de mí
-          </h1>
+          <h1 className="title-page">Acerca de mí 👤</h1>
         </div>
 
         <div className="flex justify-center">
@@ -75,6 +74,8 @@ const AboutMe = () => {
             </a>
           </div>
         </div>
+
+        <Journey />
       </div>
     </div>
   );

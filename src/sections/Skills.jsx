@@ -23,67 +23,65 @@ const dataSkills = [
   {
     image: Bootstrap,
     title: "Bootstrap",
-    percentage: "99",
+    percentage: "90",
   },
   {
     image: Figma,
     title: "Figma",
-    percentage: "99",
+    percentage: "75",
   },
   {
     image: Firebase,
     title: "Firebase",
-    percentage: "99",
+    percentage: "90",
   },
   {
     image: Git,
     title: "Git",
-    percentage: "99",
+    percentage: "80",
   },
   {
     image: MongoDB,
     title: "MongoDB",
-    percentage: "99",
+    percentage: "85",
   },
   {
     image: MySQL,
     title: "MySQL",
-    percentage: "99",
+    percentage: "70",
   },
   {
     image: Node,
     title: "Node.js",
-    percentage: "99",
+    percentage: "85",
   },
   {
     image: Python,
     title: "Python",
-    percentage: "99",
+    percentage: "80",
   },
   {
     image: React,
     title: "React",
-    percentage: "99",
+    percentage: "86",
   },
   {
     image: Tailwind,
     title: "Tailwind",
-    percentage: "99",
+    percentage: "80",
   },
   {
     image: Vue,
     title: "Vue.js",
-    percentage: "99",
+    percentage: "75",
   },
 ];
 
 const Skills = () => {
   return (
     <div>
-      <div className="text-center w-5/6 m-auto">
-        <h1 className="text-3xl my-10 font-bold uppercase text-[var(--OrangeMain)] border-b-4 mx-auto inline-block">
-          Habilidades
-        </h1>
+      <div className="text-center w-5/6 m-auto py-24">
+        <h1 className="title-page">Habilidades 🏃‍♂️‍➡️</h1>
 
         <div className="grid grid-cols-4 gap-y-8">
           {dataSkills.map((skill, index) => (
