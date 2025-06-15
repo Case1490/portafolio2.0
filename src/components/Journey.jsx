@@ -48,7 +48,7 @@ const Journey = () => {
   return (
     <div className="min-h-screen text-white pt-20">
       <h1 className="text-3xl md:text-4xl text-center font-bold mb-12 text-[var(--OrangeMain)]">
-        My Academic and Professional Journey
+        Mi trayectoria académica y profesional
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
@@ -56,11 +56,13 @@ const Journey = () => {
           {education.map((item, index) => (
             <div
               key={index}
-              className="bg-[#1c1c3c] rounded-xl p-4 mb-4 border border-[#333]"
+              className="rounded-xl p-4 mb-4 border  border-[var(--OrangeMain)]"
             >
-              <p className="text-sm text-purple-300 mb-1">{item.date}</p>
+              <p className="text-sm text-[var(--OceanBlue)] mb-1">
+                {item.date}
+              </p>
               <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="text-sm text-gray-300">{item.place}</p>
+              <p className="text-sm text-[var(--SkyBlue)]">{item.place}</p>
             </div>
           ))}
         </div>
@@ -71,11 +73,13 @@ const Journey = () => {
           {experience.map((item, index) => (
             <div
               key={index}
-              className="bg-[#1c1c3c] rounded-xl p-4 mb-4 border border-[#333]"
+              className="rounded-xl p-4 mb-4 border border-[var(--OrangeMain)]"
             >
-              <p className="text-sm text-purple-300 mb-1">{item.date}</p>
+              <p className="text-sm text-[var(--OceanBlue)] mb-1">
+                {item.date}
+              </p>
               <p className="text-lg font-semibold text-white">{item.title}</p>
-              <p className="text-sm text-gray-300">{item.place}</p>
+              <p className="text-sm text-[var(--SkyBlue)]">{item.place}</p>
             </div>
           ))}
         </div>
