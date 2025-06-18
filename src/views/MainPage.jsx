@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import AboutMe from "../sections/AboutMe";
+import Portfolio from "../sections/Portfolio";
 import Presentation from "../sections/Presentation";
 import Services from "../sections/Services";
 import Skills from "../sections/Skills";
@@ -12,6 +13,7 @@ const MainPage = () => {
       <AboutMe />
       <Skills />
       <Services />
+      <Portfolio />
     </div>
   );
 };

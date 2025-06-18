@@ -80,8 +80,16 @@ const dataSkills = [
 const Skills = () => {
   return (
     <div>
-      <div className="text-center w-5/6 m-auto py-24">
-        <h1 className="title-page">Habilidades 🏃‍♂️‍➡️</h1>
+      <div className="text-center w-5/6 text-white m-auto py-24">
+        <div className=" mb-10">
+          <h1 className="title-page">Habilidades 🏃‍♂️‍➡️</h1>
+          <p>
+            A lo largo de mi experiencia he desarrollado una serie de
+            habilidades que me permiten enfrentar desafíos con eficiencia y
+            creatividad. Estas capacidades son el resultado de años de
+            formación, práctica y constante aprendizaje.
+          </p>
+        </div>
 
         <div className="grid grid-cols-4 gap-y-8">
           {dataSkills.map((skill, index) => (

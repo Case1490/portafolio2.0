@@ -47,16 +47,27 @@ const Journey = () => {
 
   return (
     <div className="min-h-screen text-white pt-20">
-      <h1 className="text-3xl md:text-4xl text-center font-bold mb-12 text-[var(--OrangeMain)]">
-        Mi trayectoria académica y profesional
-      </h1>
+      <div className="text-center mt-6 mb-10 space-y-3">
+        <h1 className="title-page">
+          Mi trayectoria académica y profesional 🧑‍🎓
+        </h1>
+        <p>
+          A lo largo de los años he construido un camino académico y profesional
+          que refleja mi compromiso con el aprendizaje, el crecimiento personal
+          y el desarrollo de habilidades que me permitan aportar valor en cada
+          proyecto en el que participo.
+        </p>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div>
-          <h2 className="text-2xl font-semibold mb-6 text-white">Educación</h2>
+          <h2 className="text-2xl font-bold mb-6 text-[var(--OrangeMain)]">
+            Educación
+          </h2>
           {education.map((item, index) => (
             <div
               key={index}
-              className="rounded-xl p-4 mb-4 border  border-[var(--OrangeMain)]"
+              className="rounded-xl p-4 mb-4 border  border-white"
             >
               <p className="text-sm text-[var(--OceanBlue)] mb-1">
                 {item.date}
@@ -67,13 +78,13 @@ const Journey = () => {
           ))}
         </div>
         <div>
-          <h2 className="text-2xl font-semibold mb-6 text-white">
+          <h2 className="text-2xl font-bold mb-6 text-[var(--OrangeMain)]">
             Experiencia Profesional
           </h2>
           {experience.map((item, index) => (
             <div
               key={index}
-              className="rounded-xl p-4 mb-4 border border-[var(--OrangeMain)]"
+              className="rounded-xl p-4 mb-4 border border-white"
             >
               <p className="text-sm text-[var(--OceanBlue)] mb-1">
                 {item.date}

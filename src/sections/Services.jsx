@@ -42,8 +42,15 @@ const servicios = [
 
 const Servicios = () => {
   return (
-    <div className="w-5/6 m-auto py-24 text-center">
-      <h2 className="title-page">Todo lo que sé hacer 👨‍💻</h2>
+    <div className="w-5/6 m-auto py-24 text-white text-center">
+      <div className="mb-10">
+        <h1 className="title-page">Todo lo que sé hacer 👨‍💻</h1>
+        <p>
+          Estos son los servicios que ofrezco, enfocados en brindar soluciones
+          efectivas y adaptadas a las necesidades de cada proyecto o cliente,
+          con el objetivo de lograr resultados de calidad y alto impacto.
+        </p>
+      </div>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {servicios.map((servicio, index) => (
           <CardService
