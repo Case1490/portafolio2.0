@@ -1,9 +1,16 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
 import CardPortfolio from "../components/CardPortfolio";
+
+// Importa los estilos de Swiper
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const Portfolio = () => {
   return (
     <div>
-      <div className="w-5/6 m-auto py-24 text-white text-center">
+      <div className="w-[90%] m-auto py-24 text-white text-center">
         <div className="mb-10">
           <h1 className="title-page">
             El reflejo de mi pasión y habilidades👨‍💻
@@ -14,12 +21,32 @@ const Portfolio = () => {
             con el objetivo de lograr resultados de calidad y alto impacto.
           </p>
         </div>
-        <div className="grid grid-cols-4 place-items-center">
-          <CardPortfolio />
-          <CardPortfolio />
-          <CardPortfolio />
-          <CardPortfolio />
-        </div>
+
+        <Swiper
+          modules={[Pagination, Navigation]}
+          slidesPerView={3}
+          navigation
+          pagination={{ clickable: true }}
+          breakpoints={{
+            1200: { slidesPerView: 3 }, // Desktop
+            768: { slidesPerView: 2 }, // Tablet
+            0: { slidesPerView: 1 }, // Móvil
+          }}
+          className="mySwiperPortfolio"
+        >
+          <SwiperSlide>
+            <CardPortfolio />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardPortfolio />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardPortfolio />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardPortfolio />
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ const Navbar = () => {
         scrolled ? "backdrop-blur-md bg-white/10" : ""
       }`}
     >
-      <div className="py-2 px-4 w-5/6 m-auto my-2 flex items-center justify-between rounded-full">
+      <div className="py-2 px-4 w-5/6 m-auto my-2 flex items-center justify-between">
         <div className="w-[150px]">
           <img src={Logo} alt="Logo Renzo Portafolio" className="w-full" />
         </div>

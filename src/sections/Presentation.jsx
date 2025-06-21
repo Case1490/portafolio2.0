@@ -1,10 +1,15 @@
 import SocialNetworks from "../components/SocialNetworks";
 
+import Profile from "../assets/perfil.jpg";
+
 const Presentation = () => {
   return (
     <div className="backgroundPresentation">
       <div className=" w-1/2 m-auto text-center">
         <div className=" space-y-4 uppercase">
+          <div className="w-[120px] m-auto mb-2 rounded-full overflow-hidden">
+            <img src={Profile} alt="Renzo Ramos" className="w-full" />
+          </div>
           <h1 className="text-[var(--OrangeMain)] font-bold text-7xl">
             Renzo Ramos
           </h1>
@@ -14,7 +19,7 @@ const Presentation = () => {
         </div>
 
         <SocialNetworks />
-        <div class="scroll-down"></div>
+        <div className="scroll-down"></div>
       </div>
     </div>
   );
