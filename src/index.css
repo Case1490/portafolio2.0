@@ -291,3 +291,138 @@ body {
   background-color: var(--OrangeMain);
   opacity: 1;
 }
+
+/* SKILLS */
+.container {
+  perspective: 700px;
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+.tarjeta {
+  width: 120px;
+  height: 120px;
+  font-size: 40px;
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  animation: Carrusel 12s linear infinite;
+  background: rgba(255, 255, 255, 0.1);
+    /* fondo semi-transparente */
+    backdrop-filter: blur(8px);
+    /* desenfoque del fondo */
+    -webkit-backdrop-filter: blur(8px);
+}
+
+@keyframes Carrusel {
+  from {
+    transform: rotateY(360deg) translateZ(400px);
+    z-index: 10;
+    opacity: 0.9;
+  }
+
+  50% {
+    z-index: -10;
+  }
+
+  to {
+    transform: rotateX(0deg) translateZ(400px) rotateX(0deg);
+    z-index: 10;
+  }
+
+}
+
+
+#angular {
+  background-image: url('./assets/habilidades/angular.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#bootstrap {
+  background-image: url('./assets/habilidades/bootstrap.png');
+  background-size: contain;
+    background-repeat: no-repeat;
+  animation-delay: -1s;
+}
+
+
+#figma {
+  background-image: url('./assets/habilidades/figma.png');
+  background-size: contain;
+    background-repeat: no-repeat;
+  animation-delay: -2s;
+}
+
+#firebase {
+  background-image: url('./assets/habilidades/firebase.png');
+  background-size: contain;
+    background-repeat: no-repeat;
+  animation-delay: -3s;
+}
+
+
+#git {
+  background-image: url('./assets/habilidades/git.png');
+  background-size: contain;
+    background-repeat: no-repeat;
+  animation-delay: -4s;
+}
+
+
+#mongodb {
+  background-image: url('./assets/habilidades/mongodb.png');
+  background-size: contain;
+    background-repeat: no-repeat;
+  animation-delay: -5s;
+}
+
+
+
+#mysql {
+  background-image: url('./assets/habilidades/mysql.png');
+  background-size: contain;
+    background-repeat: no-repeat;
+  animation-delay: -6s;
+}
+
+
+#node {
+  background-image: url('./assets/habilidades/node.png');
+  background-size: contain;
+    background-repeat: no-repeat;
+  animation-delay: -7s;
+}
+
+#python {
+  background-image: url('./assets/habilidades/python.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation-delay: -8s;
+}
+
+#react {
+  background-image: url('./assets/habilidades/react.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation-delay: -9s;
+}
+
+#tailwind {
+  background-image: url('./assets/habilidades/tailwind.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation-delay: -10s;
+}
+
+#vue {
+  background-image: url('./assets/habilidades/vue.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation-delay: -11s;
+}
+
