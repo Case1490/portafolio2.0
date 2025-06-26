@@ -51,7 +51,7 @@ const Journey = () => {
         <h1 className="title-page">
           Mi trayectoria académica y profesional 🧑‍🎓
         </h1>
-        <p>
+        <p className="text-sm">
           A lo largo de los años he construido un camino académico y profesional
           que refleja mi compromiso con el aprendizaje, el crecimiento personal
           y el desarrollo de habilidades que me permitan aportar valor en cada

@@ -42,10 +42,10 @@ const servicios = [
 
 const Servicios = () => {
   return (
-    <div className="w-5/6 m-auto py-24 text-white text-center">
+    <div className="w-5/6 m-auto py-12 lg:py-24 text-white text-center">
       <div className="mb-10">
         <h1 className="title-page">Todo lo que sé hacer 👨‍💻</h1>
-        <p>
+        <p className="text-sm">
           Estos son los servicios que ofrezco, enfocados en brindar soluciones
           efectivas y adaptadas a las necesidades de cada proyecto o cliente,
           con el objetivo de lograr resultados de calidad y alto impacto.

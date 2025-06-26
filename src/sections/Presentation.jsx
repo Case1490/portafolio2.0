@@ -10,10 +10,10 @@ const Presentation = () => {
           <div className="w-[120px] m-auto mb-2 rounded-full overflow-hidden">
             <img src={Profile} alt="Renzo Ramos" className="w-full" />
           </div>
-          <h1 className="text-[var(--OrangeMain)] font-bold text-5xl md:text-7xl">
+          <h1 className="text-[var(--OrangeMain)] font-bold text-3xl sm:text-5xl md:text-7xl">
             Renzo Ramos
           </h1>
-          <p className="text-white text-xl">
+          <p className="text-white text-md sm:text-xl">
             soy un apasionado programador web
           </p>
         </div>
