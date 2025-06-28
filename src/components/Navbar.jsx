@@ -17,6 +17,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const contactNumber = () => {
+    const phoneNumber = "977139843";
+    const message = encodeURIComponent("Quiero más información");
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+  };
+
   return (
     <>
       <div
@@ -31,27 +37,20 @@ const Navbar = () => {
 
           {/* Menú xl+ */}
           <ul className="hidden xl:flex gap-x-8 text-white">
-            {[
-              "Inicio",
-              "Acerca de",
-              "Habilidades",
-              "Servicios",
-              "Portafolio",
-            ].map((item) => (
-              <li key={item}>
-                <a
-                  href=""
-                  className="relative after:block after:h-[2px] after:bg-white after:w-0 after:transition-all after:duration-300 hover:after:w-full"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
+            {["inicio", "acerca", "habilidades", "servicios", "portafolio"].map(
+              (item) => (
+                <li key={item}>
+                  <a href={`#${item}`} className="nav-link">
+                    {item.toUpperCase()}
+                  </a>
+                </li>
+              )
+            )}
           </ul>
 
           <a
-            href="#"
-            className="hidden xl:block bg-[var(--OrangeMain)] py-2 px-3 rounded-full text-white uppercase"
+            onClick={() => contactNumber()}
+            className=" cursor-pointer btn-contact hidden xl:block py-2 px-3 rounded-full text-white uppercase"
           >
             Contacto
           </a>
@@ -95,25 +94,26 @@ const Navbar = () => {
               </button>
 
               <ul className="mt-12 flex flex-col gap-6 text-lg">
-                <li>
-                  <a href="">Inicio</a>
-                </li>
-                <li>
-                  <a href="">Acerca de</a>
-                </li>
-                <li>
-                  <a href="">Habilidades</a>
-                </li>
-                <li>
-                  <a href="">Servicios</a>
-                </li>
-                <li>
-                  <a href="">Portafolio</a>
-                </li>
+                {[
+                  "inicio",
+                  "acerca",
+                  "habilidades",
+                  "servicios",
+                  "portafolio",
+                ].map((item) => (
+                  <li key={item}>
+                    <a
+                      href={`#${item}`}
+                      className="relative after:block after:h-[2px] after:bg-white after:w-0 after:transition-all after:duration-300 hover:after:w-full"
+                    >
+                      {item.toUpperCase()}
+                    </a>
+                  </li>
+                ))}
               </ul>
 
               <a
-                href="#"
+                onClick={() => contactNumber()}
                 className="mt-8 inline-block bg-[var(--OrangeMain)] py-2 px-4 rounded-full text-white uppercase"
               >
                 Contacto

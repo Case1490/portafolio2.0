@@ -8,6 +8,7 @@
   --GrayMain: #e9f2f9;
   --OceanBlue: #3a89c9;
   --OrangeMain: #f26c4f;
+  --OrangeMainHover: #eb8e7a;
   --BlueSecond: #03083b;
 }
 
@@ -15,6 +16,38 @@ body {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   background-color: var(--BlueMain);
+}
+
+.btn-contact{
+  background-color: var(--OrangeMain);
+}
+
+.btn-contact:hover{
+  background-color: var(--OrangeMainHover);
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  /* ajusta según lo lejos que quieras la barra */
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  /* puedes usar var(--OrangeMain) también */
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .title-page {
@@ -227,7 +260,6 @@ body {
 }
 
 /* CARDPORTFOLIO */
-/* From Uiverse.io by eslam-hany */
 .book {
   position: relative;
   margin: 60px 40px;

@@ -8,12 +8,12 @@ const Footer = () => {
   return (
     <div className="bg-[var(--BlueSecond)]">
       <div className="py-6 w-5/6 m-auto text-white">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col space-y-6 lg:space-y-0 lg:flex-row items-center justify-between">
           <div className="w-[150px]">
             <img src={Logo} alt="Logo Renzo Portafolio" className="w-full" />
           </div>
 
-          <ul className="flex gap-x-8">
+          <ul className="flex flex-col text-center space-y-6 sm:space-y-0 sm:flex-row gap-x-8">
             <li>
               <a href="">Inicio</a>
             </li>
@@ -39,7 +39,7 @@ const Footer = () => {
             <FaLinkedin size={25} />
           </div>
         </div>
-        <div className="text-center text-slate-500 mt-8">
+        <div className="text-center text-slate-500 mt-8 mb-4">
           <p>Todos los derechos reservados | RenzoRamos 2025 &copy; </p>
         </div>
       </div>

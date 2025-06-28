@@ -24,15 +24,15 @@ const Contact = () => {
 
   return (
     <div>
-      <div className="w-5/6 py-24 m-auto flex items-center justify-around">
-        <div className="w-1/2 text-white">
+      <div className="w-5/6 py-12 lg:py-24 m-auto flex flex-col space-y-10 lg:space-y-0 lg:flex-row items-center justify-around">
+        <div className="w-full lg:w-1/2 text-white lg:text-left text-center">
           <h1 className="title-page">Contáctame 📲</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
             quod corporis, recusandae illo saepe cumque. quod corporis,
             recusandae illo saepe cumque.
           </p>
-          <div className="border rounded-xl max-w-[400px] mt-10 px-4 py-6 space-y-6">
+          <div className="border rounded-xl mx-auto lg:mx-0 max-w-[400px] mt-10 px-4 py-6 space-y-6">
             <div className="flex items-center gap-x-3 text-[var(--OrangeMain)]">
               <MdEmail size={30} />
               <h1 className="text-xl text-white">renzoramos414@gmail.com</h1>
@@ -43,10 +43,10 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="text-white">
+        <div className="text-white w-full lg:w-2/5">
           <form
             onSubmit={handleSubmit}
-            className="max-w-md mx-auto p-6 rounded-xl border shadow-md space-y-4"
+            className=" mx-auto p-6 rounded-xl border shadow-md space-y-4"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -121,7 +121,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="w-full py-2 bg-[var(--OrangeMain)] text-white rounded-lg hover:bg-gray-800 transition"
+              className="w-full py-2 bg-[var(--OrangeMain)] text-white rounded-lg cursor-pointer"
             >
               Enviar Mensaje
             </button>
