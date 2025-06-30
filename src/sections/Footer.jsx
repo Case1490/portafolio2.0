@@ -15,32 +15,60 @@ const Footer = () => {
 
           <ul className="flex flex-col text-center space-y-6 sm:space-y-0 sm:flex-row gap-x-8">
             <li>
-              <a href="">Inicio</a>
+              <a href="#inicio" className="nav-link">
+                Inicio
+              </a>
             </li>
             <li>
-              <a href="">Acerca de</a>
+              <a href="#acerca" className="nav-link">
+                Acerca
+              </a>
             </li>
             <li>
-              <a href="">Habilidades</a>
+              <a href="#habilidades" className="nav-link">
+                Habilidades
+              </a>
             </li>
             <li>
-              <a href="">Servicios</a>
+              <a href="#servicios" className="nav-link">
+                Servicios
+              </a>
             </li>
             <li>
-              <a href="">Portafolio</a>
+              <a href="#portafolio" className="nav-link">
+                Portafolio
+              </a>
             </li>
             <li>
-              <a href="">Contacto</a>
+              <a href="#contacto" className="nav-link">
+                contacto
+              </a>
             </li>
           </ul>
 
           <div className="flex items-center gap-x-3">
-            <FaFacebook size={25} />
-            <FaLinkedin size={25} />
+            <a
+              href="https://www.facebook.com/renzoramos414"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaFacebook size={25} />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/renzo-ramos-586846270/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin size={25} />
+            </a>
           </div>
         </div>
         <div className="text-center text-slate-500 mt-8 mb-4">
-          <p>Todos los derechos reservados | RenzoRamos 2025 &copy; </p>
+          <p>
+            &copy; {new Date().getFullYear()} Renzo Ramos. Todos los derechos
+            reservados.
+          </p>
         </div>
       </div>
     </div>

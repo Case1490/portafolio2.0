@@ -4,7 +4,7 @@ import Profile from "../assets/perfil.jpg";
 
 const Presentation = () => {
   return (
-    <div className="backgroundPresentation">
+    <div className="backgroundPresentation" id="inicio">
       <div className=" w-3/4 lg:w-1/2 m-auto text-center">
         <div className=" space-y-4 uppercase">
           <div className="w-[120px] m-auto mb-2 rounded-full overflow-hidden">

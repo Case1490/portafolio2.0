@@ -37,15 +37,20 @@ const Navbar = () => {
 
           {/* Menú xl+ */}
           <ul className="hidden xl:flex gap-x-8 text-white">
-            {["inicio", "acerca", "habilidades", "servicios", "portafolio"].map(
-              (item) => (
-                <li key={item}>
-                  <a href={`#${item}`} className="nav-link">
-                    {item.toUpperCase()}
-                  </a>
-                </li>
-              )
-            )}
+            {[
+              "inicio",
+              "acerca",
+              "habilidades",
+              "servicios",
+              "portafolio",
+              "contacto",
+            ].map((item) => (
+              <li key={item}>
+                <a href={`#${item}`} className="nav-link">
+                  {item.toUpperCase()}
+                </a>
+              </li>
+            ))}
           </ul>
 
           <a
@@ -100,6 +105,7 @@ const Navbar = () => {
                   "habilidades",
                   "servicios",
                   "portafolio",
+                  "contacto",
                 ].map((item) => (
                   <li key={item}>
                     <a

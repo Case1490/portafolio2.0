@@ -14,15 +14,18 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
   background-color: var(--BlueMain);
 }
 
-.btn-contact{
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-contact {
   background-color: var(--OrangeMain);
 }
 
-.btn-contact:hover{
+.btn-contact:hover {
   background-color: var(--OrangeMainHover);
 }
 
@@ -64,7 +67,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .title-page{
+  .title-page {
     margin-bottom: 30px;
     font-size: 1rem;
   }
@@ -100,7 +103,6 @@ body {
 
 /* SOCIAL NETWORKS */
 .cardSocial {
-
   width: fit-content;
   height: fit-content;
   margin: auto;
@@ -126,7 +128,7 @@ body {
 }
 
 @media (max-width: 425px) {
-  .socialContainer{
+  .socialContainer {
     width: 40px;
     height: 40px;
   }
@@ -356,10 +358,10 @@ body {
   border-radius: 8px;
   animation: Carrusel 12s linear infinite;
   background: rgba(255, 255, 255, 0.1);
-    /* fondo semi-transparente */
-    backdrop-filter: blur(8px);
-    /* desenfoque del fondo */
-    -webkit-backdrop-filter: blur(8px);
+  /* fondo semi-transparente */
+  backdrop-filter: blur(8px);
+  /* desenfoque del fondo */
+  -webkit-backdrop-filter: blur(8px);
 }
 
 @keyframes Carrusel {
@@ -380,43 +382,42 @@ body {
 }
 
 @media (max-width: 1050px) {
-
   .containerTarget {
-      perspective: 900px;
-      width: 90%;
-      margin: auto;
-      height: 350px;
-      position: relative; 
-    }
+    perspective: 900px;
+    width: 90%;
+    margin: auto;
+    height: 350px;
+    position: relative;
+  }
 
-  .target{
+  .target {
     width: 70px;
     height: 70px;
     animation: Carrusel1050 12s linear infinite;
   }
 
-    @keyframes Carrusel1050 {
-      from {
-        transform: rotateY(360deg) translateZ(300px);
-        z-index: 10;
-        opacity: 0.9;
-      }
-  
-      50% {
-        z-index: -10;
-      }
-  
-      to {
-        transform: rotateX(0deg) translateZ(300px) rotateX(0deg);
-        z-index: 10;
-      } }
+  @keyframes Carrusel1050 {
+    from {
+      transform: rotateY(360deg) translateZ(300px);
+      z-index: 10;
+      opacity: 0.9;
+    }
+
+    50% {
+      z-index: -10;
+    }
+
+    to {
+      transform: rotateX(0deg) translateZ(300px) rotateX(0deg);
+      z-index: 10;
+    }
+  }
 }
 
 @media (max-width: 710px) {
-
   .containerTarget {
-      height: 100px;
-    }
+    height: 100px;
+  }
 
   .target {
     left: 40%;
@@ -442,17 +443,16 @@ body {
 }
 
 @media (max-width: 450px) {
-
   .containerTarget {
     height: 100px;
   }
 
-    .target {
-      width: 50px;
-      height: 50px;
-      left: 43%;
-      animation: Carrusel450 12s linear infinite;
-    }
+  .target {
+    width: 50px;
+    height: 50px;
+    left: 43%;
+    animation: Carrusel450 12s linear infinite;
+  }
 
   @keyframes Carrusel450 {
     from {
@@ -473,91 +473,84 @@ body {
 }
 
 #angular {
-  background-image: url('./assets/habilidades/angular.png');
+  background-image: url("./assets/habilidades/angular.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 #bootstrap {
-  background-image: url('./assets/habilidades/bootstrap.png');
+  background-image: url("./assets/habilidades/bootstrap.png");
   background-size: contain;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   animation-delay: -1s;
 }
 
-
 #figma {
-  background-image: url('./assets/habilidades/figma.png');
+  background-image: url("./assets/habilidades/figma.png");
   background-size: contain;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   animation-delay: -2s;
 }
 
 #firebase {
-  background-image: url('./assets/habilidades/firebase.png');
+  background-image: url("./assets/habilidades/firebase.png");
   background-size: contain;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   animation-delay: -3s;
 }
 
-
 #git {
-  background-image: url('./assets/habilidades/git.png');
+  background-image: url("./assets/habilidades/git.png");
   background-size: contain;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   animation-delay: -4s;
 }
 
-
 #mongodb {
-  background-image: url('./assets/habilidades/mongodb.png');
+  background-image: url("./assets/habilidades/mongodb.png");
   background-size: contain;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   animation-delay: -5s;
 }
 
-
-
 #mysql {
-  background-image: url('./assets/habilidades/mysql.png');
+  background-image: url("./assets/habilidades/mysql.png");
   background-size: contain;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   animation-delay: -6s;
 }
 
-
 #node {
-  background-image: url('./assets/habilidades/node.png');
+  background-image: url("./assets/habilidades/node.png");
   background-size: contain;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   animation-delay: -7s;
 }
 
 #python {
-  background-image: url('./assets/habilidades/python.png');
+  background-image: url("./assets/habilidades/python.png");
   background-size: contain;
   background-repeat: no-repeat;
   animation-delay: -8s;
 }
 
 #react {
-  background-image: url('./assets/habilidades/react.png');
+  background-image: url("./assets/habilidades/react.png");
   background-size: contain;
   background-repeat: no-repeat;
   animation-delay: -9s;
 }
 
 #tailwind {
-  background-image: url('./assets/habilidades/tailwind.png');
+  background-image: url("./assets/habilidades/tailwind.png");
   background-size: contain;
   background-repeat: no-repeat;
   animation-delay: -10s;
 }
 
 #vue {
-  background-image: url('./assets/habilidades/vue.png');
+  background-image: url("./assets/habilidades/vue.png");
   background-size: contain;
   background-repeat: no-repeat;
   animation-delay: -11s;
 }
-

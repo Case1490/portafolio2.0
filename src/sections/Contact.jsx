@@ -23,7 +23,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div id="contacto">
       <div className="w-5/6 py-12 lg:py-24 m-auto flex flex-col space-y-10 lg:space-y-0 lg:flex-row items-center justify-around">
         <div className="w-full lg:w-1/2 text-white lg:text-left text-center">
           <h1 className="title-page">Contáctame 📲</h1>

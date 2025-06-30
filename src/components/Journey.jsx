@@ -47,11 +47,11 @@ const Journey = () => {
 
   return (
     <div className="min-h-screen text-white pt-20">
-      <div className="text-center mt-6 mb-10 space-y-3">
+      <div className="text-center mt-6 mb-20 space-y-3">
         <h1 className="title-page">
           Mi trayectoria académica y profesional 🧑‍🎓
         </h1>
-        <p className="text-sm">
+        <p className="text-sm lg:text-lg">
           A lo largo de los años he construido un camino académico y profesional
           que refleja mi compromiso con el aprendizaje, el crecimiento personal
           y el desarrollo de habilidades que me permitan aportar valor en cada

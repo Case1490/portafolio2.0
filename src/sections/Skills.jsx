@@ -1,10 +1,10 @@
 const Skills = () => {
   return (
-    <div>
+    <div id="habilidades">
       <div className="text-center w-5/6 text-white m-auto py-12 lg:py-24">
         <div className=" mb-10">
           <h1 className="title-page">Habilidades 🏃‍♂️‍➡️</h1>
-          <p className="text-sm">
+          <p className="text-sm lg:text-lg">
             A lo largo de mi experiencia he desarrollado una serie de
             habilidades que me permiten enfrentar desafíos con eficiencia y
             creatividad. Estas capacidades son el resultado de años de

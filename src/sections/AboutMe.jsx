@@ -3,7 +3,7 @@ import Journey from "../components/Journey";
 
 const AboutMe = () => {
   return (
-    <div>
+    <div id="acerca">
       <div className="w-5/6 m-auto py-12 lg:py-24">
         <div className="text-center py-10 mb-6">
           <h1 className="title-page">Acerca de mí 👤</h1>
@@ -32,7 +32,7 @@ const AboutMe = () => {
             <h1 className="text-3xl font-bold uppercase">
               Hola! Soy Renzo Ramos
             </h1>
-            <p className="text-sm">
+            <p className="text-sm lg:text-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
               aliquam earum voluptatibus natus eligendi similique odit aut
               repellat eveniet sit aperiam, optio expedita maiores incidunt
