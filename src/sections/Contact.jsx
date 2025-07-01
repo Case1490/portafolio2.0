@@ -6,9 +6,9 @@ import { FaPhoneAlt } from "react-icons/fa";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    lastname: "",
     phone: "",
-    subject: "",
+    email: "",
     message: "",
   });
 
@@ -28,9 +28,10 @@ const Contact = () => {
         <div className="w-full lg:w-1/2 text-white lg:text-left text-center">
           <h1 className="title-page">Contáctame 📲</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            quod corporis, recusandae illo saepe cumque. quod corporis,
-            recusandae illo saepe cumque.
+            <b>¿Tienes un proyecto en mente?</b> <br /> Estoy disponible para
+            colaborar en nuevos desafíos. Si buscas a alguien comprometido,
+            creativo y con experiencia en desarrollo web, no dudes en
+            escribirme. ¡Hablemos y hagamos realidad tus ideas!
           </p>
           <div className="border rounded-xl mx-auto lg:mx-0 max-w-[400px] mt-10 px-4 py-6 space-y-6">
             <div className="flex items-center gap-x-3 text-[var(--OrangeMain)]">
@@ -55,10 +56,10 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  name="nombres"
+                  name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="John Carter"
+                  placeholder="Renzo"
                   className="w-full px-3 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-orange-400"
                   required
                 />
@@ -70,8 +71,8 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  name="apellidos"
-                  value={formData.email}
+                  name="lastname"
+                  value={formData.lastname}
                   onChange={handleChange}
                   placeholder="contact@email.com"
                   className="w-full px-3 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-orange-400"
@@ -98,7 +99,7 @@ const Contact = () => {
                 <input
                   type="email"
                   name="email"
-                  value={formData.phone}
+                  value={formData.email}
                   onChange={handleChange}
                   placeholder="cliente@gmail.com"
                   className="w-full px-3 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-orange-400"
@@ -121,7 +122,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="w-full py-2 bg-[var(--OrangeMain)] text-white rounded-lg cursor-pointer"
+              className="w-full py-2 btn-contact text-white rounded-lg cursor-pointer"
             >
               Enviar Mensaje
             </button>

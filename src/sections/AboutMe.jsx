@@ -33,14 +33,10 @@ const AboutMe = () => {
               Hola! Soy Renzo Ramos
             </h1>
             <p className="text-sm lg:text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-              aliquam earum voluptatibus natus eligendi similique odit aut
-              repellat eveniet sit aperiam, optio expedita maiores incidunt
-              tenetur facilis mollitia est consequatur!Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Eos aliquam earum voluptatibus
-              natus eligendi similique odit aut repellat eveniet sit aperiam,
-              optio expedita maiores incidunt tenetur facilis mollitia est
-              consequatur!
+              Soy Renzo Ramos, desarrollador web full stack con experiencia en
+              React, Node.js y MySQL. Me apasiona crear soluciones útiles y
+              funcionales, combinando diseño, lógica y rendimiento. Siempre
+              busco mejorar, aprender y aportar valor con cada línea de código.
             </p>
 
             <div className="text-white space-y-2">
