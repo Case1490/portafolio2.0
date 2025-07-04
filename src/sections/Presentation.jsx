@@ -1,6 +1,6 @@
 import SocialNetworks from "../components/SocialNetworks";
 
-import Profile from "../assets/perfil.jpg";
+import Profile from "../assets/perfil.png";
 
 const Presentation = () => {
   return (

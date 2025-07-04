@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 
@@ -12,14 +11,47 @@ const Contact = () => {
     message: "",
   });
 
+  const [status, setStatus] = useState(""); // éxito o error
+  const [loading, setLoading] = useState(false); // indicador de envío
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData); // Aquí puedes enviar los datos al backend o API
+    setLoading(true);
+    setStatus("");
+
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/send`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus(`✅ ${data.message}`);
+        setFormData({
+          name: "",
+          lastname: "",
+          phone: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        setStatus(`❌ ${data.message || "Error al enviar el mensaje."}`);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setStatus("❌ No se pudo enviar el mensaje.");
+    } finally {
+      setLoading(false);
+      setTimeout(() => setStatus(""), 3000);
+    }
   };
 
   return (
@@ -44,10 +76,11 @@ const Contact = () => {
             </div>
           </div>
         </div>
+
         <div className="text-white w-full lg:w-2/5">
           <form
             onSubmit={handleSubmit}
-            className=" mx-auto p-6 rounded-xl border shadow-md space-y-4"
+            className="mx-auto p-6 rounded-xl border shadow-md space-y-4"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -74,7 +107,7 @@ const Contact = () => {
                   name="lastname"
                   value={formData.lastname}
                   onChange={handleChange}
-                  placeholder="contact@email.com"
+                  placeholder="Ramos"
                   className="w-full px-3 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-orange-400"
                   required
                 />
@@ -89,7 +122,7 @@ const Contact = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="(245) 245 - 1345"
+                  placeholder="977139843"
                   className="w-full px-3 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-orange-400"
                 />
               </div>
@@ -108,23 +141,28 @@ const Contact = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">Message</label>
+              <label className="block text-sm font-medium mb-1">Mensaje</label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Please write your message..."
+                placeholder="Escribe un mensaje..."
                 rows={4}
                 className="w-full px-3 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-orange-400"
                 required
               ></textarea>
             </div>
 
+            {status && (
+              <p className="text-sm text-center font-semibold">{status}</p>
+            )}
+
             <button
               type="submit"
-              className="w-full py-2 btn-contact text-white rounded-lg cursor-pointer"
+              className="w-full py-2 btn-contact text-white rounded-lg cursor-pointer disabled:opacity-60"
+              disabled={loading}
             >
-              Enviar Mensaje
+              {loading ? "Enviando..." : "Enviar Mensaje"}
             </button>
           </form>
         </div>

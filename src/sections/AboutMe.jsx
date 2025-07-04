@@ -1,7 +1,14 @@
 import AboutMeImage from "../assets/sobremi.jpg";
 import Journey from "../components/Journey";
 
+// IMPORT CV
+import CVDocument from "/CV RENZO RAMOS.pdf";
+
 const AboutMe = () => {
+  const handleDownloadCV = () => {
+    window.open(CVDocument); // Abre el PDF en una nueva pestaña para descargar
+  };
+
   return (
     <div id="acerca">
       <div className="w-5/6 m-auto py-12 lg:py-24">
@@ -67,12 +74,12 @@ const AboutMe = () => {
             </div>
 
             <div className="flex justify-end lg:justify-start">
-              <a
-                href="#"
-                className="bg-[var(--OrangeMain)] inline-block py-2 px-3 rounded-full text-white uppercase font-bold"
+              <button
+                onClick={handleDownloadCV}
+                className="bg-[var(--OrangeMain)] inline-block py-2 px-3 rounded-full text-white uppercase font-bold cursor-pointer"
               >
-                Descargar CV
-              </a>
+                Visualizar CV
+              </button>
             </div>
           </div>
         </div>

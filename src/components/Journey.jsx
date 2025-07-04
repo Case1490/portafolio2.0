@@ -90,7 +90,7 @@ const Journey = () => {
       place: "Webberyl",
     },
     {
-      date: "Actualidad 2025",
+      date: "Actualidad",
       detail:
         "Diseñé y desarrollé el sitio web de una agencia enfocada en neuromarketing, utilizando React, Tailwind y animaciones interactivas. El diseño comunica su enfoque innovador, combinando estética publicitaria con funcionalidad estratégica.",
       place: "Agencia de publicidad | PropositoCreativo",
