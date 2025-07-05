@@ -3,14 +3,14 @@ import { MdTouchApp } from "react-icons/md";
 const CardPortfolio = ({ image, title, description, link }) => {
   return (
     <div className="book">
-      <div className=" w-[90%]">
-        <h1 className="text-xl font-bold mb-2">{title}</h1>
-        <p className="text-sm">{description}</p>
+      <div className=" w-[90%] p-3 sm:p-0">
+        <h1 className="text-lg sm:text-xl font-bold mb-2 uppercase">{title}</h1>
+        <p className="text-[12px] sm:text-sm">{description}</p>
         <a
           href={link}
           target="_blank"
           rel="noreferrer"
-          className="bg-[var(--BlueMain)] px-3 py-2 rounded-xl inline-block mt-4 hover:bg-[var(--OceanBlue)] transition-all"
+          className="bg-[var(--BlueMain)] text-sm sm:text-md px-3 py-2 rounded-xl inline-block mt-4 hover:bg-[var(--OceanBlue)] transition-all"
         >
           Ver Sitio Web
         </a>

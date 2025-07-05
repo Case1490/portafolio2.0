@@ -57,7 +57,7 @@ const dataPortfolio = [
   },
   {
     image: Prinfer,
-    title: "Prinfer",
+    title: "Grupo Prinfer",
     description:
       "Tienda online de productos industriales, especializada en herramientas, equipos y suministros con catálogo completo y atención personalizada.",
     link: "https://amazing-frangipane-853ae3.netlify.app/",

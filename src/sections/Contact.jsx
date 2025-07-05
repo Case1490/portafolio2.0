@@ -68,11 +68,13 @@ const Contact = () => {
           <div className="border rounded-xl mx-auto lg:mx-0 max-w-[400px] mt-10 px-4 py-6 space-y-6">
             <div className="flex items-center gap-x-3 text-[var(--OrangeMain)]">
               <MdEmail size={30} />
-              <h1 className="text-xl text-white">renzoramos414@gmail.com</h1>
+              <h1 className="text-sm sm:text-xl text-white">
+                renzoramos414@gmail.com
+              </h1>
             </div>
             <div className="flex items-center gap-x-3 text-[var(--OrangeMain)]">
               <FaPhoneAlt size={28} />
-              <h1 className="text-xl text-white">+51 977 139 843</h1>
+              <h1 className="text-sm sm:text-xl text-white">+51 977 139 843</h1>
             </div>
           </div>
         </div>
