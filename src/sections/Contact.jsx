@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -57,7 +59,12 @@ const Contact = () => {
   return (
     <div id="contacto">
       <div className="w-5/6 py-12 lg:py-24 m-auto flex flex-col space-y-10 lg:space-y-0 lg:flex-row items-center justify-around">
-        <div className="w-full lg:w-1/2 text-white lg:text-left text-center">
+        <motion.div
+          className="w-full lg:w-1/2 text-white lg:text-left text-center"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <h1 className="title-page">Contáctame 📲</h1>
           <p>
             <b>¿Tienes un proyecto en mente?</b> <br /> Estoy disponible para
@@ -77,9 +84,14 @@ const Contact = () => {
               <h1 className="text-sm sm:text-xl text-white">+51 977 139 843</h1>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="text-white w-full lg:w-2/5">
+        <motion.div
+          className="text-white w-full lg:w-2/5"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <form
             onSubmit={handleSubmit}
             className="mx-auto p-6 rounded-xl border shadow-md space-y-4"
@@ -167,7 +179,7 @@ const Contact = () => {
               {loading ? "Enviando..." : "Enviar Mensaje"}
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

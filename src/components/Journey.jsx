@@ -1,3 +1,6 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+
 const Journey = () => {
   const education = [
     {
@@ -99,7 +102,13 @@ const Journey = () => {
 
   return (
     <div className="min-h-screen text-white pt-20">
-      <div className="text-center mt-6 mb-20 space-y-3">
+      {/* Título y descripción */}
+      <motion.div
+        className="text-center mt-6 mb-20 space-y-3"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <h1 className="title-page">
           Mi trayectoria académica y profesional 🧑‍🎓
         </h1>
@@ -109,43 +118,61 @@ const Journey = () => {
           y el desarrollo de habilidades que me permitan aportar valor en cada
           proyecto en el que participo.
         </p>
-      </div>
+      </motion.div>
 
+      {/* Contenido de Educación y Experiencia */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div>
+        {/* Educación */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-2xl font-bold mb-6 text-[var(--OrangeMain)]">
             Educación
           </h2>
           {education.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="rounded-xl p-4 mb-4 border  border-white"
+              className="rounded-xl p-4 mb-4 border border-white"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
             >
               <p className="text-sm text-[var(--OceanBlue)] mb-1">
                 {item.date}
               </p>
               <p className="text-lg font-semibold text-white">{item.title}</p>
               <p className="text-sm text-[var(--SkyBlue)]">{item.place}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
-        <div>
+        </motion.div>
+
+        {/* Experiencia Profesional */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-2xl font-bold mb-6 text-[var(--OrangeMain)]">
             Experiencia Profesional
           </h2>
           {experience.map((item, index) => (
-            <div
+            <motion.div
               key={index}
               className="rounded-xl p-4 mb-4 border border-white"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
             >
               <p className="text-sm text-[var(--OceanBlue)] mb-1">
                 {item.date}
               </p>
               <p className="text-sm text-[var(--SkyBlue)]">{item.place}</p>
               <p className="text-lg font-semibold text-white">{item.detail}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

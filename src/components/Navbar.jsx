@@ -105,11 +105,11 @@ const Navbar = () => {
                   "habilidades",
                   "servicios",
                   "portafolio",
-                  "contacto",
                 ].map((item) => (
                   <li key={item}>
                     <a
                       href={`#${item}`}
+                      onClick={() => setShowMenu(false)}
                       className="relative after:block after:h-[2px] after:bg-white after:w-0 after:transition-all after:duration-300 hover:after:w-full"
                     >
                       {item.toUpperCase()}

@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 import { MdOutlineMonitor } from "react-icons/md";
 import { FaCode, FaDatabase } from "react-icons/fa";
 import { IoIosCloudUpload } from "react-icons/io";
@@ -46,24 +48,52 @@ const Servicios = () => {
       className="w-5/6 m-auto py-12 lg:py-24 text-white text-center"
       id="servicios"
     >
-      <div className="mb-10">
+      {/* Animación del título y párrafo */}
+      <motion.div
+        className="mb-10"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <h1 className="title-page">Todo lo que sé hacer 👨‍💻</h1>
         <p className="text-sm lg:text-lg">
           Estos son los servicios que ofrezco, enfocados en brindar soluciones
           efectivas y adaptadas a las necesidades de cada proyecto o cliente,
           con el objetivo de lograr resultados de calidad y alto impacto.
         </p>
-      </div>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      </motion.div>
+
+      {/* Tarjetas animadas en cascada */}
+      <motion.div
+        className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          visible: {
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}
+      >
         {servicios.map((servicio, index) => (
-          <CardService
+          <motion.div
             key={index}
-            icono={servicio.icono}
-            titulo={servicio.titulo}
-            descripcion={servicio.descripcion}
-          />
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.5 }}
+          >
+            <CardService
+              icono={servicio.icono}
+              titulo={servicio.titulo}
+              descripcion={servicio.descripcion}
+            />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import CardPortfolio from "../components/CardPortfolio";
@@ -96,7 +98,12 @@ const Portfolio = () => {
   return (
     <div id="portafolio">
       <div className="w-[90%] m-auto py-12 lg:py-24 text-white text-center">
-        <div className="mb-10">
+        <motion.div
+          className="mb-10"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <h1 className="title-page">
             El reflejo de mi pasión y habilidades👨‍💻
           </h1>
@@ -105,7 +112,7 @@ const Portfolio = () => {
             efectivas y adaptadas a las necesidades de cada proyecto o cliente,
             con el objetivo de lograr resultados de calidad y alto impacto.
           </p>
-        </div>
+        </motion.div>
 
         <Swiper
           modules={[Pagination, Navigation]}
