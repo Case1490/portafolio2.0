@@ -15,6 +15,7 @@ const Contact = () => {
 
   const [status, setStatus] = useState(""); // éxito o error
   const [loading, setLoading] = useState(false); // indicador de envío
+  const [delayedNotice, setDelayedNotice] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,6 +26,12 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     setStatus("");
+    setDelayedNotice(false); // Reset al mensaje de espera
+
+    // Temporizador de 3 segundos para mostrar mensaje de espera
+    const delayTimer = setTimeout(() => {
+      if (loading) setDelayedNotice(true);
+    }, 3000);
 
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/send`, {
@@ -51,7 +58,9 @@ const Contact = () => {
       console.error("Error:", error);
       setStatus("❌ No se pudo enviar el mensaje.");
     } finally {
+      clearTimeout(delayTimer); // Detiene el temporizador
       setLoading(false);
+      setDelayedNotice(false); // Oculta el mensaje si se mostró
       setTimeout(() => setStatus(""), 3000);
     }
   };
@@ -67,10 +76,12 @@ const Contact = () => {
         >
           <h1 className="title-page">Contáctame 📲</h1>
           <p>
-            <b>¿Tienes un proyecto en mente?</b> <br /> Estoy disponible para
-            colaborar en nuevos desafíos. Si buscas a alguien comprometido,
-            creativo y con experiencia en desarrollo web, no dudes en
-            escribirme. ¡Hablemos y hagamos realidad tus ideas!
+            <span className="font-bold text-2xl">
+              ¿Tienes un proyecto en mente?
+            </span>{" "}
+            <br /> Estoy disponible para colaborar en nuevos desafíos. Si buscas
+            a alguien comprometido, creativo y con experiencia en desarrollo
+            web, no dudes en escribirme. ¡Hablemos y hagamos realidad tus ideas!
           </p>
           <div className="border rounded-xl mx-auto lg:mx-0 max-w-[400px] mt-10 px-4 py-6 space-y-6">
             <div className="flex items-center gap-x-3 text-[var(--OrangeMain)]">
@@ -169,6 +180,12 @@ const Contact = () => {
 
             {status && (
               <p className="text-sm text-center font-semibold">{status}</p>
+            )}
+
+            {delayedNotice && (
+              <p className="text-sm text-center text-yellow-300 font-semibold">
+                ⏳ Estamos procesando tu mensaje, por favor espera...
+              </p>
             )}
 
             <button
