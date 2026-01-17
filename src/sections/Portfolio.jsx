@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 // IMPORT IMAGES OF PORTFOLIO
 import DrCardenas from "../assets/portafolio/doctorCardenas.png";
 import PropositoCreativo from "../assets/portafolio/propositocreativo.png";
+import LaTaberna from "../assets/portafolio/lataberna.png";
 import Webberyl from "../assets/portafolio/webberyl.jpg";
 import FutechWeb from "../assets/portafolio/futechweb.png";
 import Jevic from "../assets/portafolio/jevic.png";
@@ -35,7 +36,13 @@ const dataPortfolio = [
       "Página moderna y dinámica para agencia de marketing, enfocada en creatividad, estrategias digitales y crecimiento de marcas.",
     link: "https://agenciadepublicidadpropositocreativo.com/",
   },
-
+  {
+    image: LaTaberna,
+    title: "Restobar La Taberna",
+    description:
+      "Página de Restobar moderno con comida fusión, cocteles únicos, música en vivo y ambiente acogedor para compartir.",
+    link: "https://latabernarestobar.netlify.app/",
+  },
   {
     image: Webberyl,
     title: "Webberyl | Desarrollo de páginas web",

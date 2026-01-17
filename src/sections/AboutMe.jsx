@@ -4,7 +4,7 @@ import AboutMeImage from "../assets/sobremi.jpg";
 import Journey from "../components/Journey";
 
 // IMPORT CV
-import CVDocument from "/CV RENZO RAMOS.pdf";
+import CVDocument from "/CV-RENZO-RAMOS.pdf";
 
 const AboutMe = () => {
   const handleDownloadCV = () => {
