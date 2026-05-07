@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap");
+@import "tailwindcss";
+
+:root {
+  --bg:      #080808;
+  --bg2:     #0f0f0f;
+  --bg3:     #161616;
+  --line:    rgba(255,255,255,0.07);
+  --line2:   rgba(255,255,255,0.13);
+  --text:    #f0ede8;
+  --text2:   #7a7772;
+  --text3:   #4a4845;
+  --accent:  #E8FF47;
+  --accent2: #b8cc2a;
+}
+
+html { scroll-behavior: smooth; }
+
+a, button {
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); }
+
+/* Cursor custom — no tiene equivalente en Tailwind */
+.cursor {
+  position: fixed;
+  width: 8px; height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width .2s, height .2s;
+  mix-blend-mode: difference;
+}
+.cursor-ring {
+  position: fixed;
+  width: 36px; height: 36px;
+  border: 1px solid rgba(232,255,71,0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: all .12s ease-out;
+}
+.cursor--hover { width: 16px; height: 16px; }
+.cursor-ring--hover { width: 56px; height: 56px; opacity: 0.5; }
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (pointer: coarse) {
+  body { cursor: auto; }
+  .cursor, .cursor-ring { display: none; }
+}
+
+.skill-img {
+  filter: grayscale(1) brightness(0.7);
+  transition: filter 0.3s ease;
+}
+.group:hover .skill-img {
+  filter: grayscale(0) brightness(1);
+}
+
+/* Services hover effects */
+.service-item:hover .service-line {
+  height: 100%;
+}
+
+.service-item:hover .service-title {
+  color: var(--accent);
+}
+
+.service-item:hover .service-arrow {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+/* Skills hover effects */
+.skill-card:hover .skill-line {
+  width: 100%;
+}
+
+/* Portfolio cards */
+.project-card:hover .project-img {
+  filter: grayscale(0%) brightness(0.45) !important;
+  transform: scale(1.04);
+}
+
+.project-card:hover .project-link {
+  opacity: 1 !important;
+}
+
+.project-card:hover .project-content {
+  transform: translateY(-4px);
+}
