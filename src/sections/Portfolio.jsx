@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 // Imágenes de proyectos
 import imgStockFlow from '../assets/portafolio/stockflow.png'
-import imgDashboardFinanciero from '../assets/portafolio/DashboardFinanciero.png'
+import imgDashboardFinanciero from '../assets/portafolio/dashboardFinanciero.png'
 import imgStylestore from '../assets/portafolio/stylestore.png'
 import imgDentalprime from '../assets/portafolio/dentalprime.png'
 import imgCardenas from "../assets/portafolio/doctorCardenas.png";
