@@ -3,52 +3,65 @@ import { motion } from "framer-motion";
 
 // Imágenes de proyectos
 import imgStockFlow from '../assets/portafolio/stockflow.png'
+import imgDashboardFinanciero from '../assets/portafolio/DashboardFinanciero.png'
+import imgStylestore from '../assets/portafolio/stylestore.png'
+import imgDentalprime from '../assets/portafolio/dentalprime.png'
 import imgCardenas from "../assets/portafolio/doctorCardenas.png";
 import imgWebberyl from "../assets/portafolio/webberyl.jpg";
 import imgProposito from "../assets/portafolio/propositocreativo.png";
-import imgTaberna from "../assets/portafolio/lataberna.png";
-
 
 const projects = [
   
   {
-    title: "Dr Cárdenas · Cirujano Oncólogo",
-    desc: "Sitio web informativo para cirujano oncólogo. Diseño limpio, accesible y orientado a captar pacientes.",
-    tags: ["React", "Tailwind"],
-    img: imgCardenas,
-    url: "https://cardenasmedical.com/",
-  },
-  {
-    title: "StockFlow · Sistema de Inventario",
-    desc: "App de gestión de inventario y ventas con roles, dashboard en tiempo real, carrito de compras y modo claro/oscuro.",
-    tags: ["React", "Supabase", "PWA", "Featured"],
-    img: imgStockFlow,
-    url: "https://stockflow-zeta-nine.vercel.app/",
-    featured: true,
-  },
-  {
-    title: "Webberyl",
-    desc: "Agencia de diseño y desarrollo web con portafolio interactivo.",
-    tags: ["Agencia"],
-    img: imgWebberyl,
-    url: "https://webberyl.netlify.app/",
-  },
-
-  {
-    title: "Agencia Propósito Creativo",
-    desc: "Página moderna para agencia de publicidad digital.",
-    tags: ["Marketing"],
-    img: imgProposito,
-    url: "https://agenciadepublicidadpropositocreativo.com/",
-  },
-
-  {
-    title: "Restobar La Taberna",
-    desc: "Página para restobar con comida fusión y cocteles únicos.",
-    tags: ["Restaurante"],
-    img: imgTaberna,
-    url: "https://latabernarestobar.netlify.app/",
-  },
+  title: "StockFlow · Sistema de Inventario",
+  desc: "App de gestión de inventario y ventas con roles, dashboard en tiempo real, carrito de compras y modo claro/oscuro.",
+  tags: ["React", "Supabase", "PWA", "Featured"],
+  img: imgStockFlow,
+  url: "https://stockflow-zeta-nine.vercel.app/",
+  featured: true,
+},
+{
+  title: "FinanceBoard · Dashboard Financiero",
+  desc: "Dashboard financiero interactivo con visualización de métricas, reportes y análisis de datos en tiempo real.",
+  tags: ["Next.js", "TypeScript", "Tailwind"],
+  img: imgDashboardFinanciero,
+  url: "https://dashboard-financiero-five.vercel.app/",
+},
+{
+  title: "StyleStore · Tienda de Moda",
+  desc: "Tienda ecommerce de ropa y accesorios con catálogo, carrito de compras y experiencia de compra fluida.",
+  tags: ["React", "Tailwind", "Supabase"],
+  img: imgStylestore,
+  url: "https://stylestore-tienda.vercel.app/",
+},
+{
+  title: "DentalPrime · Clínica Dental",
+  desc: "Sistema de reserva de citas para clínica dental con gestión de disponibilidad y confirmación de turnos.",
+  tags: ["React", "Tailwind", "Supabase"],
+  img: imgDentalprime,
+  url: "https://clinica-dental-tan.vercel.app/",
+},
+{
+  title: "Dr Cárdenas · Cirujano Oncólogo",
+  desc: "Sitio web informativo para cirujano oncólogo. Diseño limpio, accesible y orientado a captar pacientes.",
+  tags: ["React", "Tailwind"],
+  img: imgCardenas,
+  url: "https://cardenasmedical.com/",
+},
+{
+  title: "Webberyl",
+  desc: "Agencia de diseño y desarrollo web con portafolio interactivo.",
+  tags: ["Agencia"],
+  img: imgWebberyl,
+  url: "https://webberyl.netlify.app/",
+},
+{
+  title: "Agencia Propósito Creativo",
+  desc: "Página moderna para agencia de publicidad digital.",
+  tags: ["Marketing"],
+  img: imgProposito,
+  url: "https://agenciadepublicidadpropositocreativo.com/",
+},
 
 ];
 
