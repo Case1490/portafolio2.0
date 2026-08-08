@@ -10,12 +10,12 @@ const services = [
   {
     num: "02",
     title: "Backend · APIs REST",
-    desc: "Servidores seguros y eficientes con Node.js y Express. Arquitectura limpia, autenticación JWT y documentación incluida.",
+    desc: "Servidores seguros y escalables con NestJS y tRPC. Arquitectura limpia, autenticación y tipado end-to-end con TypeScript.",
   },
   {
     num: "03",
     title: "Bases de datos",
-    desc: "Diseño, modelado y optimización de bases de datos relacionales (MySQL, PostgreSQL) y no relacionales (MongoDB). Queries eficientes y bien estructuradas.",
+    desc: "Diseño, modelado y optimización de bases de datos relacionales (PostgreSQL, MySQL) con Prisma ORM. Queries eficientes, migraciones y esquemas bien estructurados.",
   },
   {
     num: "04",

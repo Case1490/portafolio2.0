@@ -82,7 +82,7 @@ const Hero = () => {
                         <strong className="text-[var(--text)] font-medium">
                             rápidas, funcionales y con carácter
                         </strong>
-                        . Especializado en React, Node.js y MySQL.
+                        . Especializado en React/Next.js, NestJS y PostgreSQL con TypeScript.
                     </motion.p>
 
                     {/* Botones */}

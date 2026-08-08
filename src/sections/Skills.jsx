@@ -3,14 +3,18 @@ import { motion } from "framer-motion";
 
 // Importa todos los logos
 import reactLogo from "../assets/habilidades/react.png";
+import nextjsLogo from "../assets/habilidades/nextjs.svg";
 import angularLogo from "../assets/habilidades/angular.png";
 import tailwindLogo from "../assets/habilidades/tailwind.png";
 import nodeLogo from "../assets/habilidades/node.png";
-import pythonLogo from "../assets/habilidades/python.png";
+import nestjsLogo from "../assets/habilidades/nestjs.svg";
+import typescriptLogo from "../assets/habilidades/typescript.svg";
+import trpcLogo from "../assets/habilidades/trpc.svg";
 import mysqlLogo from "../assets/habilidades/mysql.png";
-import mongoLogo from "../assets/habilidades/mongodb.png";
 import postgreSQLLogo from '../assets/habilidades/postgresql.png'
+import prismaLogo from "../assets/habilidades/prisma.svg";
 import firebaseLogo from "../assets/habilidades/firebase.png";
+import dockerLogo from "../assets/habilidades/docker.svg";
 import gitLogo from "../assets/habilidades/git.png";
 import figmaLogo from "../assets/habilidades/figma.png";
 import bootstrapLogo from "../assets/habilidades/bootstrap.png";
@@ -18,17 +22,22 @@ import bootstrapLogo from "../assets/habilidades/bootstrap.png";
 const skills = [
     // Frontend
     { name: "React", cat: "Frontend", logo: reactLogo },
+    { name: "Next.js", cat: "Frontend", logo: nextjsLogo },
     { name: "Angular", cat: "Frontend", logo: angularLogo },
     { name: "Tailwind CSS", cat: "Styling", logo: tailwindLogo },
+    // Lenguaje
+    { name: "TypeScript", cat: "Lenguaje", logo: typescriptLogo },
     // Backend
     { name: "Node.js", cat: "Backend", logo: nodeLogo },
-    { name: "Python", cat: "Backend", logo: pythonLogo },
+    { name: "NestJS", cat: "Backend", logo: nestjsLogo },
+    { name: "tRPC", cat: "Backend", logo: trpcLogo },
     // Bases de datos
     { name: "MySQL", cat: "Base de datos", logo: mysqlLogo },
-    { name: "MongoDB", cat: "Base de datos", logo: mongoLogo },
     { name: "PostreSQL", cat: "Base de datos", logo: postgreSQLLogo },
+    { name: "Prisma", cat: "ORM", logo: prismaLogo },
     // Tools
     { name: "Firebase", cat: "BaaS / Cloud", logo: firebaseLogo },
+    { name: "Docker", cat: "DevOps", logo: dockerLogo },
     { name: "Git", cat: "Control versiones", logo: gitLogo },
     { name: "Figma", cat: "Diseño UI/UX", logo: figmaLogo },
     { name: "Bootstrap", cat: "Styling", logo: bootstrapLogo },

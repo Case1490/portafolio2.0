@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 // Imágenes de proyectos
 import imgStockFlow from '../assets/portafolio/stockflow.png'
-import imgDashboardFinanciero from '../assets/portafolio/dashboardFinanciero.png'
+import imgQuincena from '../assets/portafolio/quincena.jpg'
 import imgStylestore from '../assets/portafolio/stylestore.png'
 import imgDentalprime from '../assets/portafolio/dentalprime.png'
 import imgCardenas from "../assets/portafolio/doctorCardenas.png";
@@ -21,11 +21,11 @@ const projects = [
   featured: true,
 },
 {
-  title: "FinanceBoard · Dashboard Financiero",
-  desc: "Dashboard financiero interactivo con visualización de métricas, reportes y análisis de datos en tiempo real.",
-  tags: ["Next.js", "TypeScript", "Tailwind"],
-  img: imgDashboardFinanciero,
-  url: "https://dashboard-financiero-five.vercel.app/",
+  title: "Quincenas · Control de Gastos",
+  desc: "App de finanzas personales para registrar ingresos y gastos por categoría, definir límites mensuales y ver el mes completo de un vistazo.",
+  tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Supabase"],
+  img: imgQuincena,
+  url: "https://quincena-bice.vercel.app/",
 },
 {
   title: "StyleStore · Tienda de Moda",

@@ -10,7 +10,7 @@ const info = [
 ];
 
 const journey = [
-  { year: "2022",     type: "Educación",  role: "Ingeniería de Sistemas",     place: "Universidad — Lima" },
+  { year: "2022",     type: "Educación",  role: "Ingeniería de Software",     place: "UTP — Lima" },
   { year: "2022",     type: "Formación",  role: "Especialización en Desarrollo web",   place: "React · Node · APIs · SQL" },
   { year: "2023",     type: "Proyecto",   role: "Primer cliente real",         place: "Webberyl — Diseño y desarrollo" },
   { year: "2024–hoy", type: "Freelance",  role: "Desarrollador Full Stack",    place: "11+ proyectos entregados" },
