@@ -13,8 +13,16 @@ import imgChambapp from "../assets/portafolio/chambapp.png";
 import imgHidramap from "../assets/portafolio/hidramap.png";
 
 const projects = [
-  
+
   {
+  title: "HIDRAMAP · SaaS para Talleres Automotrices",
+  desc: "Plataforma multitenant para gestión de talleres automotrices (órdenes de trabajo, inventario, ventas y cursos). Diseñé la capa de autenticación con better-auth: sesiones basadas en cookies y guards de rol para 3 niveles de acceso (Técnico, Admin Empresa, Superadmin).",
+  tags: ["Next.js", "NestJS", "tRPC", "Prisma", "Multitenant", "Featured"],
+  img: imgHidramap,
+  url: "#",
+  featured: true,
+},
+{
   title: "StockFlow · Sistema de Inventario",
   desc: "App de gestión de inventario y ventas con roles, dashboard en tiempo real, carrito de compras y modo claro/oscuro.",
   tags: ["React", "Supabase", "PWA", "Featured"],
@@ -70,14 +78,6 @@ const projects = [
   tags: ["React Native", "Expo", "GCP", "Cloud Run", "Privado"],
   img: imgChambapp,
   url: "#",
-},
-{
-  title: "HIDRAMAP · SaaS para Talleres Automotrices",
-  desc: "Plataforma multitenant para gestión de talleres automotrices (órdenes de trabajo, inventario, ventas y cursos). Diseñé la capa de autenticación con better-auth: sesiones basadas en cookies y guards de rol para 3 niveles de acceso (Técnico, Admin Empresa, Superadmin).",
-  tags: ["Next.js", "NestJS", "tRPC", "Prisma", "Multitenant", "Featured"],
-  img: imgHidramap,
-  url: "#",
-  featured: true,
 },
 
 ];
