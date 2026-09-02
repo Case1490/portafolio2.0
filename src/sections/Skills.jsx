@@ -18,6 +18,7 @@ import dockerLogo from "../assets/habilidades/docker.svg";
 import gitLogo from "../assets/habilidades/git.png";
 import figmaLogo from "../assets/habilidades/figma.png";
 import bootstrapLogo from "../assets/habilidades/bootstrap.png";
+import gcpLogo from "../assets/habilidades/gcp.svg";
 
 const skills = [
     // Frontend
@@ -37,6 +38,7 @@ const skills = [
     { name: "Prisma", cat: "ORM", logo: prismaLogo },
     // Tools
     { name: "Firebase", cat: "BaaS / Cloud", logo: firebaseLogo },
+    { name: "GCP", cat: "Cloud", logo: gcpLogo },
     { name: "Docker", cat: "DevOps", logo: dockerLogo },
     { name: "Git", cat: "Control versiones", logo: gitLogo },
     { name: "Figma", cat: "Diseño UI/UX", logo: figmaLogo },

@@ -9,6 +9,8 @@ import imgDentalprime from '../assets/portafolio/dentalprime.png'
 import imgCardenas from "../assets/portafolio/doctorCardenas.png";
 import imgWebberyl from "../assets/portafolio/webberyl.jpg";
 import imgProposito from "../assets/portafolio/propositocreativo.png";
+import imgChambapp from "../assets/portafolio/chambapp.png";
+import imgHidramap from "../assets/portafolio/hidramap.png";
 
 const projects = [
   
@@ -62,6 +64,21 @@ const projects = [
   img: imgProposito,
   url: "https://agenciadepublicidadpropositocreativo.com/",
 },
+{
+  title: "ChambApp · Marketplace de Servicios",
+  desc: "App tipo InDrive para contratar especialistas (electricidad, mueblería y más), con roles de Cliente, Especialista y Administrador. Desplegada para pruebas del cliente vía TestFlight y Google Play Console (pista interna), con backend en GCP (Cloud Run y Cloud SQL).",
+  tags: ["React Native", "Expo", "GCP", "Cloud Run", "Privado"],
+  img: imgChambapp,
+  url: "#",
+},
+{
+  title: "HIDRAMAP · SaaS para Talleres Automotrices",
+  desc: "Plataforma multitenant para gestión de talleres automotrices (órdenes de trabajo, inventario, ventas y cursos). Diseñé la capa de autenticación con better-auth: sesiones basadas en cookies y guards de rol para 3 niveles de acceso (Técnico, Admin Empresa, Superadmin).",
+  tags: ["Next.js", "NestJS", "tRPC", "Prisma", "Multitenant", "Featured"],
+  img: imgHidramap,
+  url: "#",
+  featured: true,
+},
 
 ];
 
@@ -109,12 +126,12 @@ const Portfolio = () => {
         {featured.map((p) => (
           <div ref={addRef} key={p.title} className="reveal mb-px">
             <a
-              href={p.url}
-              target="_blank"
+              href={p.url === "#" ? undefined : p.url}
+              target={p.url === "#" ? undefined : "_blank"}
               rel="noreferrer"
               className="project-card group relative block overflow-hidden bg-[var(--bg3)]
                          border border-[var(--line)] w-full"
-              style={{ aspectRatio: "21/9" }}
+              style={{ aspectRatio: "21/9", cursor: p.url === "#" ? "default" : "pointer" }}
             >
               <img
                 src={p.img}
@@ -137,10 +154,17 @@ const Portfolio = () => {
                   {p.title}
                 </h3>
                 <p className="text-sm text-white/60 max-w-lg mb-4 leading-relaxed">{p.desc}</p>
-                <span className="project-link inline-flex items-center gap-2 text-[0.72rem] tracking-[0.1em]
-                                 uppercase text-[var(--accent)] opacity-0 transition-opacity duration-300">
-                  Ver proyecto ↗
-                </span>
+                {p.url !== "#" && (
+                  <span className="project-link inline-flex items-center gap-2 text-[0.72rem] tracking-[0.1em]
+                                   uppercase text-[var(--accent)] opacity-0 transition-opacity duration-300">
+                    Ver proyecto ↗
+                  </span>
+                )}
+                {p.url === "#" && (
+                  <span className="text-[0.65rem] tracking-[0.08em] uppercase text-[var(--text3)]">
+                    Privado / en desarrollo
+                  </span>
+                )}
               </div>
             </a>
           </div>
