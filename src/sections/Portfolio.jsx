@@ -11,10 +11,19 @@ import imgWebberyl from "../assets/portafolio/webberyl.jpg";
 import imgProposito from "../assets/portafolio/propositocreativo.png";
 import imgChambapp from "../assets/portafolio/chambapp.png";
 import imgHidramap from "../assets/portafolio/hidramap.png";
+import imgZyphertech from "../assets/portafolio/zyphertech.png";
 
 const projects = [
 
   {
+  title: "ZypherTech · Ecommerce Full-Stack",
+  desc: "Ecommerce multi-vendedor (Cliente / Vendedor / Admin) con motor de comisiones por precedencia y checkout idempotente con reembolso automático ante fallas de stock. Sometido a una auditoría de seguridad manual propia que encontró y corrigió 2 CVEs críticos de RCE en Next.js, una vulnerabilidad de secuestro de cuentas y un SSRF, cada uno verificado con pruebas de concepto reales en producción.",
+  tags: ["Next.js", "tRPC", "Prisma", "PostgreSQL", "Seguridad", "Featured"],
+  img: imgZyphertech,
+  url: "https://ecommerce-jvt.vercel.app/",
+  featured: true,
+},
+{
   title: "HIDRAMAP · SaaS para Talleres Automotrices",
   desc: "Plataforma multitenant para gestión de talleres automotrices (órdenes de trabajo, inventario, ventas y cursos). Diseñé la capa de autenticación con better-auth: sesiones basadas en cookies y guards de rol para 3 niveles de acceso (Técnico, Admin Empresa, Superadmin).",
   tags: ["Next.js", "NestJS", "tRPC", "Prisma", "Multitenant", "Featured"],
